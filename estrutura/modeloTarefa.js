@@ -1,5 +1,5 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../conexao/conexaoBanco.js';
+import sequelize from '../conexao/conexaoBanco.js'; // caminho corrigido
 
 const Tarefa = sequelize.define('Tarefa', {
   titulo: {
