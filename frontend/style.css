@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #00c9ff, #00ffab, #ff6a00);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 5vh 5vw;
+}
+
+/* Layout horizontal */
+.container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1600px;   /* largura ajustada para telas grandes */
+  width: 100%;
+  gap: 4rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Conteúdo à esquerda */
+.left {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 2rem;   /* alinha com topo da imagem */
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form input {
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+}
+
+form button {
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #1a73e8, #00c9ff);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+form button:hover {
+  background-color: #0f5ec2;
+}
+
+/* Seção de tarefas pendentes */
+.pendentes {
+  margin-top: 2rem;
+}
+
+.pendentes h2 {
+  font-size: 1.8rem;
+}
+
+.pendentes p {
+  font-size: 1.3rem;
+}
+
+footer {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #e0e0e0;
+}
+
+/* Ilustração à direita */
+.right {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.right img {
+  max-height: 75vh;
+  width: auto;
+  object-fit: contain;
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .right {
+    flex: 1 1 100%;
+    padding: 2rem;
+  }
+
+  h1, .subtitle {
+    text-align: center;
+  }
+
+  .right img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .pendentes {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

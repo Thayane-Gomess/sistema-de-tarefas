@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minhas Tarefas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>📋 Minhas Tarefas</h1>
+      <p class="subtitle">Organize seu dia com eficiência e simplicidade</p>
+
+      <section class="form-section">
+        <h2>➕ Adicionar nova tarefa</h2>
+        <form id="form-tarefa">
+          <input type="text" id="titulo" placeholder="Título da tarefa" required />
+          <input type="text" id="descricao" placeholder="Descrição (opcional)" />
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="right">
+      <img src="img/imagem_tarefa.jpg" alt="Ilustração de tarefas" />
+      <div class="pendentes">
+        <h2>📌 Tarefas pendentes</h2>
+        <!-- Lista de tarefas renderizada pelo script.js -->
+        <ul id="lista-tarefas"></ul>
+        <footer>
+          <p>Desenvolvido por Thayane Gomes | Sistema de Tarefas</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
