@@ -2,22 +2,21 @@ import express from 'express';
 import tarefaRoutes from './routes/tarefaRoutes.js';
 import sequelize from './db.js';
 import dotenv from 'dotenv';
-import morgan from 'morgan'; // 👉 import do morgan
+import morgan from 'morgan';
+import cors from 'cors';
 
 dotenv.config();
 
 const app = express();
 
-// Middleware para logs
-app.use(morgan('dev')); // 👉 mostra logs no terminal
-
-// Permite que o servidor entenda JSON
+app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors({
+  origin: "https://seu-projeto.vercel.app"
+}));
 
-// Usa as rotas
 app.use(tarefaRoutes);
 
-// Sincroniza o banco e inicia o servidor
 sequelize.sync().then(() => {
   console.log('Banco de dados sincronizado');
   app.listen(process.env.PORT, () => {
