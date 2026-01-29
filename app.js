@@ -9,14 +9,14 @@ dotenv.config();
 
 const app = express();
 
-app.use(morgan('dev'));
-app.use(express.json());
-
 app.use(cors({
   origin: process.env.FRONTEND || '*', 
   credentials: true
   
 }));
+
+app.use(morgan('dev'));
+app.use(express.json());
 
 app.use('/', tarefaRoutes);
 

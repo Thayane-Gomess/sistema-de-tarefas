@@ -5,7 +5,7 @@ const listaPendentes = document.getElementById("lista-pendentes");
 const listaAndamento = document.getElementById("lista-andamento");
 const listaConcluidas = document.getElementById("lista-concluidas");
 
-// Função para renderizar tarefas
+// renderizar tarefas
 async function carregarTarefas() {
   const res = await fetch(API_URL);
   const tarefas = await res.json();
@@ -34,7 +34,7 @@ async function carregarTarefas() {
   });
 }
 
-// Adicionar nova tarefa
+// Adiciona nova tarefa
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
 

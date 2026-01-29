@@ -1,11 +1,11 @@
-const API_URL = "https://sistema-de-tarefas-6gfb.onrender.com/tarefas";
+const API_URL = "http://localhost:3000/tarefas";
 
 const form = document.getElementById("form-tarefa");
 const listaPendentes = document.getElementById("lista-pendentes");
 const listaAndamento = document.getElementById("lista-andamento");
 const listaConcluidas = document.getElementById("lista-concluidas");
 
-// renderiza tarefas
+// renderiza 
 async function carregarTarefas() {
   try {
     const res = await fetch(API_URL);
@@ -52,7 +52,7 @@ form.addEventListener("submit", async function (e) {
       body: JSON.stringify({ titulo, descricao, status: "pendente" })
     });
 
-    const data = await res.json(); // <-- captura o retorno
+    const data = await res.json(); 
     console.log("Tarefa criada:", data);
 
     if (!res.ok) {
