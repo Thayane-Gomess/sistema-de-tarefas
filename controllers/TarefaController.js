@@ -1,4 +1,4 @@
-// controllers/TarefaController.js
+
 import Tarefa from '../models/Tarefa.js';
 
 class TarefaController {
