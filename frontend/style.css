@@ -1,12 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f0f9ff, #e0f2fe); /* azul pastel suave */
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -27,12 +21,10 @@ header .descricao-header {
   font-size: 1.5rem;
   font-style: italic;
   color: #374151;
-  font-weight: 500;
   background: #e0f2fe;
   padding: 10px 20px;
   border-radius: 8px;
   display: inline-block;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 main {
@@ -44,22 +36,10 @@ main {
 }
 
 .form-section {
-  background: #ffffff;
+  background: #fff;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
-}
-
-.form-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-  color: #2563eb;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 input {
@@ -72,16 +52,11 @@ input {
 button {
   padding: 16px;
   background-color: #2563eb;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 10px;
-  font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #1d4ed8;
 }
 
 .tarefas {
@@ -91,21 +66,10 @@ button:hover {
 }
 
 .coluna {
-  background: #ffffff;
+  background: #fff;
   padding: 35px;
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0,0,0,0.05);
-  min-height: 350px;
-}
-
-.coluna h2 {
-  font-size: 1.6rem;
-  margin-bottom: 25px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
 }
 
 li {
@@ -116,10 +80,8 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 17px;
 }
 
-/* Informações da tarefa */
 .tarefa-info {
   display: flex;
   flex-direction: column;
@@ -133,71 +95,15 @@ li {
 
 .tarefa-info .descricao {
   font-size: 1rem;
-  color: #2563eb; /* azul para destaque */
+  color: #2563eb;
   font-weight: 500;
 }
 
-/* Estados das tarefas */
-.status-pendente {
-  color: #d97706;
-  font-weight: bold;
-}
+.status-pendente { color: #d97706; font-weight: bold; }
+.status-andamento { color: #2563eb; font-weight: bold; }
+.status-concluida { color: #059669; font-weight: bold; text-decoration: line-through; }
 
-.status-andamento {
-  color: #2563eb;
-  font-weight: bold;
-}
-
-.status-concluida {
-  color: #059669;
-  font-weight: bold;
-  text-decoration: line-through;
-}
-
-.tarefa-concluida {
-  background-color: #e6f4ea;
-}
-
-.tarefa-andamento {
-  background-color: #e0f2fe;
-}
-
-/* Botões */
-button.andamento {
-  background-color: #facc15; /* amarelo */
-  margin-left: 10px;
-}
-
-button.concluir {
-  background-color: #10b981; /* verde */
-  margin-left: 10px;
-}
-
-button.excluir {
-  background-color: #ef4444; /* vermelho */
-  margin-left: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: transparent;
-}
-
-footer p {
-  font-size: 1rem;
-  opacity: 0.7;
-  margin: 5px 0;
-}
-
-footer .creditos {
-  font-size: 0.85rem;
-  opacity: 0.6;
-}
-
-/* 📱 Responsivo */
-@media (max-width: 1100px) {
-  .tarefas {
-    grid-template-columns: 1fr;
-  }
-}
+button.andamento { background-color: #facc15; margin-left: 10px; }
+button.concluir { background-color: #10b981; margin-left: 10px; }
+button.excluir { background-color: #ef4444; margin-left: 10px; }
+button.editar { background-color: #6b7280; margin-left: 10px; }

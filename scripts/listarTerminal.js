@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/tarefas";
+const API_URL = "https://sistema-de-tarefas-6gfb.onrender.com/tarefas";
 
 const form = document.getElementById("form-tarefa");
 const listaPendentes = document.getElementById("lista-pendentes");

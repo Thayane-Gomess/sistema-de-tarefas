@@ -1,6 +1,6 @@
+// app.js
 import express from 'express';
 import tarefaRoutes from './routes/tarefaRoutes.js';
-import sequelize from './db.js';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
@@ -11,19 +11,16 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(cors());
+
+
+app.use(cors({
+  origin: [
+    "https://sistema-de-tarefas-l5qu.vercel.app",
+    "https://sistema-de-tarefas-lsqu-c7aipg917-thayanes-projects-54f5b37c.vercel.app",
+    "http://localhost:5500"
+  ]
+}));
 
 app.use('/', tarefaRoutes);
-
-sequelize.sync()
-  .then(() => {
-    console.log('Banco de dados sincronizado');
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(`Servidor rodando na porta ${process.env.PORT || 3000}`);
-    });
-  })
-  .catch((error) => {
-    console.error('Erro ao sincronizar o banco:', error);
-  });
 
 export default app;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minhas Tarefas</title>
+  <title>Sistema de Tarefas</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,7 +13,6 @@
   </header>
 
   <main>
-    <!-- Seção de adicionar tarefa -->
     <section class="form-section">
       <h2>➕ Adicionar nova tarefa</h2>
       <form id="form-tarefa">
@@ -23,31 +22,29 @@
       </form>
     </section>
 
-    <!-- Seção de tarefas -->
     <section class="tarefas">
       <div class="coluna">
-        <h2>⭐ Tarefas pendentes</h2>
+        <h2>⭐ Pendentes</h2>
         <ul id="lista-pendentes"></ul>
       </div>
 
       <div class="coluna">
-        <h2>🔄 Tarefas em andamento</h2>
+        <h2>🔄 Em andamento</h2>
         <ul id="lista-andamento"></ul>
       </div>
 
       <div class="coluna">
-        <h2>✅ Tarefas concluídas</h2>
+        <h2>✅ Concluídas</h2>
         <ul id="lista-concluidas"></ul>
       </div>
     </section>
   </main>
 
-  <!-- Rodapé -->
   <footer>
     <p>Sistema de Tarefas</p>
     <p class="creditos">Desenvolvido por Thayane Gomes</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
