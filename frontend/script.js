@@ -1,4 +1,4 @@
-const API_URL = "https://sistema-de-tarefas-m2qp.onrender.com/tarefas";
+const API_URL = "https://thayna-to-do-list.onrender.com/api/tarefas";
 
 const form = document.getElementById("form-tarefa");
 const listaPendentes = document.getElementById("lista-pendentes");
