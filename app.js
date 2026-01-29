@@ -15,8 +15,8 @@ app.use(express.json());
 
 app.use(cors({
   origin: [
-    "https://sistema-de-tarefas-l5qu.vercel.app", 
-    /\.vercel\.app$/, 
+    "https://sistema-de-tarefas-l5qu.vercel.app",
+    "https://sistema-de-tarefas-lsqu-c7aipg917-thayanes-projects-54f5b37c.vercel.app",
     "http://localhost:5500"
   ]
 }));
